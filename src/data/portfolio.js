@@ -5,7 +5,7 @@ export const profile = {
   role: 'Full Stack Developer',
   tagline:
     'I build modern web applications and practical software solutions with a focus on clean, scalable, and user-friendly development.',
-  resumeUrl: '#', // Replace with a link to your hosted resume PDF
+  resumeUrl: '/DIPANGI_AGARWAL_Resume_webdev.pdf',
   available: true,
 };
 

@@ -85,6 +85,7 @@ export default function Hero() {
           >
             <a
               href={profile.resumeUrl}
+              download="DIPANGI_AGARWAL_Resume_webdev.pdf"
               className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
             >
               <Download size={15} />
