@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[calc(100vh-4rem)] flex items-center py-8 px-5 sm:px-8 overflow-hidden"
+      className="relative min-h-[calc(100vh-4rem)] flex items-center pt-6 pb-12 sm:pt-8 sm:pb-20 md:pt-10 md:pb-24 px-5 sm:px-8 overflow-hidden"
     >
       <div aria-hidden className="absolute inset-0 -z-10">
         <div className="absolute inset-0 hero-grid opacity-[0.12]" />

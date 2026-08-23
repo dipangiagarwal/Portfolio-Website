@@ -6,7 +6,7 @@ const iconMap = { Layers, Server, Database, BrainCircuit };
 
 export default function About() {
   return (
-    <section id="about" className="section-shell py-12 md:py-20 px-5 sm:px-8">
+    <section id="about" className="section-shell">
       <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
         <div className="ambient-orb ambient-orb-cyan" style={{ top: '20%', right: '2%' }} />
       </div>

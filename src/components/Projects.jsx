@@ -7,7 +7,7 @@ const isPlaceholder = (url) => !url || url.startsWith('[ADD');
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-shell py-12 md:py-20 px-5 sm:px-8">
+    <section id="projects" className="section-shell">
       <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
         <div className="ambient-orb ambient-orb-cyan" style={{ top: '15%', right: '5%' }} />
         <div className="ambient-orb ambient-orb-violet" style={{ bottom: '10%', left: '3%' }} />
