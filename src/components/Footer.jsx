@@ -15,11 +15,13 @@ export default function Footer() {
 
         <div className="flex items-center gap-4">
           <a
-            href={isPlaceholder(socials.github) ? null : socials.github}
+            href={isPlaceholder(socials.github) ? undefined : socials.github}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="GitHub"
             className={`p-2 rounded-md transition-colors ${
               isPlaceholder(socials.github)
-                ? 'text-slate-600 cursor-not-allowed'
+                ? 'text-slate-600 cursor-not-allowed pointer-events-none'
                 : 'text-muted hover:text-accent hover:bg-white/5'
             }`}
           >

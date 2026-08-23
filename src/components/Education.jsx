@@ -4,7 +4,7 @@ import Reveal from '@/components/Reveal';
 
 export default function Education() {
   return (
-    <section id="education" className="section-shell py-6 sm:py-8 px-5 sm:px-8">
+    <section id="education" className="section-shell py-12 md:py-20 px-5 sm:px-8">
       <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
         <div className="ambient-orb ambient-orb-violet" style={{ top: '15%', right: '5%' }} />
       </div>

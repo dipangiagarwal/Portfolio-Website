@@ -13,7 +13,7 @@ const iconMap = { Code2, Layout, Server, Database, BrainCircuit, Wrench };
 
 export default function Skills() {
   return (
-    <section id="skills" className="section-shell py-6 sm:py-8 px-5 sm:px-8 bg-ink-soft/30">
+    <section id="skills" className="section-shell py-12 md:py-20 px-5 sm:px-8 bg-ink-soft/30">
       <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
         <div className="ambient-orb ambient-orb-cyan" style={{ top: '20%', left: '5%' }} />
       </div>

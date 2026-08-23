@@ -65,7 +65,6 @@ html.light {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
-  scroll-snap-type: y mandatory;
   background: var(--ink);
 }
 
@@ -131,14 +130,8 @@ textarea {
 
 .section-shell {
   position: relative;
-  scroll-margin-top: 0;
   min-height: calc(100vh - 4rem);
   box-sizing: border-box;
-  scroll-snap-align: start;
-}
-
-section[id] {
-  scroll-snap-align: start;
 }
 
 .surface-card {

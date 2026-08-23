@@ -10,19 +10,19 @@ export const profile = {
 };
 
 export const socials = {
-  github: '[ADD GITHUB URL]',
+  github: 'https://github.com/dipangiagarwal',
   linkedin: 'https://www.linkedin.com/in/dipangi-agarwal-42222524b',
   email: 'dipangiagarwal04@gmail.com',
 };
 
 export const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Education', href: '#education' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Experience', href: '/experience' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Skills', href: '/skills' },
+  { label: 'Education', href: '/education' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export const about = {
@@ -44,7 +44,7 @@ export const experiences = [
     company: 'Kuchoriya Techsoft',
     status: 'Current',
     current: true,
-    period: '[Add dates]',
+    period: 'July 2026 – Present',
     points: [
       'Working on full-stack web application development',
       'Developing frontend interfaces and backend functionality',
@@ -59,7 +59,7 @@ export const experiences = [
     company: 'Pixel Genix',
     status: 'Previous Internship',
     current: false,
-    period: '[Add dates]',
+    period: 'Jan 2026 – June 2026',
     points: [
       'Worked on full-stack web development projects',
       'Developed frontend and backend features',
@@ -86,9 +86,9 @@ export const projects = [
       'PostgreSQL database',
       'Attendance rules and validation',
     ],
-    github: '[ADD GITHUB URL]',
+    github: 'https://github.com/dipangiagarwal/AI-Attendance-System',
     demo: '[ADD LIVE DEMO URL]',
-    image: '[ADD PROJECT IMAGE]',
+    image: '/assets/ai-attendance.png',
   },
   {
     name: 'Pixel CRM',
@@ -102,9 +102,9 @@ export const projects = [
       'Database management',
       'Full-stack architecture',
     ],
-    github: '[ADD GITHUB URL]',
+    github: 'https://github.com/dipangiagarwal/Pixel-CRM',
     demo: '[ADD LIVE DEMO URL]',
-    image: '[ADD PROJECT IMAGE]',
+    image: '/assets/pixel-crm.png',
   },
   {
     name: 'Car Price Prediction',
@@ -118,9 +118,9 @@ export const projects = [
       'Price prediction',
       'Model evaluation',
     ],
-    github: '[ADD GITHUB URL]',
+    github: 'https://github.com/dipangiagarwal/Car-Price-Prediction',
     demo: '[ADD LIVE DEMO URL]',
-    image: '[ADD PROJECT IMAGE]',
+    image: '/assets/car-prediction.png',
   },
 ];
 
@@ -159,9 +159,9 @@ export const skillCategories = [
 
 export const education = [
   {
-    degree: 'B.Tech — Computer Science & Engineering',
+    degree: 'B.Tech — Computer Science & Engineering (AI & ML)',
     institution: 'JECRC University, Jaipur',
-    period: '[Add dates]',
+    period: 'Sep 2022 – July 2026',
   },
 ];
 
@@ -170,5 +170,5 @@ export const contact = {
   text: 'Interested in working together or discussing an opportunity? Feel free to reach out.',
   linkedin: 'https://www.linkedin.com/in/dipangi-agarwal-42222524b',
   email: 'dipangiagarwal04@gmail.com',
-  github: '[ADD GITHUB URL]',
+  github: 'https://github.com/dipangiagarwal',
 };

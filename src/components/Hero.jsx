@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 import { profile, socials } from '@/data/portfolio';
 
@@ -13,15 +14,12 @@ const techChips = [
 ];
 
 export default function Hero() {
-  const scrollTo = (href) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
+  const navigate = useNavigate();
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-16 pb-6 px-5 sm:px-8 overflow-hidden"
+      className="relative min-h-[calc(100vh-4rem)] flex items-center py-8 px-5 sm:px-8 overflow-hidden"
     >
       <div aria-hidden className="absolute inset-0 -z-10">
         <div className="absolute inset-0 hero-grid opacity-[0.12]" />
@@ -64,14 +62,14 @@ export default function Hero() {
             style={{ animationDelay: '240ms' }}
           >
             <button
-              onClick={() => scrollTo('#projects')}
+              onClick={() => navigate('/projects')}
               className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-lg bg-accent text-ink font-semibold text-sm hover:bg-accent-hover transition-colors shadow-lg shadow-accent/20"
             >
               View Projects
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
             </button>
             <button
-              onClick={() => scrollTo('#contact')}
+              onClick={() => navigate('/contact')}
               className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-lg border border-white/15 text-slate-200 font-medium text-sm hover:border-accent/50 hover:text-accent transition-colors"
             >
               <Mail size={16} />

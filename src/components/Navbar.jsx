@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, Moon, Sun, Github, Linkedin } from 'lucide-react';
 import { navLinks, profile, socials } from '@/data/portfolio';
 import useTheme from '@/hooks/useTheme';
@@ -6,7 +7,6 @@ import useTheme from '@/hooks/useTheme';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState('#home');
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -15,29 +15,6 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  useEffect(() => {
-    const sections = navLinks
-      .map((l) => document.querySelector(l.href))
-      .filter(Boolean);
-    if (!sections.length) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
-        });
-      },
-      { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
-    );
-    sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
-  }, []);
-
-  const handleNav = (href) => {
-    setOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <header
@@ -48,28 +25,31 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
-        <button
-          onClick={() => handleNav('#home')}
+        <Link
+          to="/"
+          onClick={() => setOpen(false)}
           className="font-mono text-sm font-semibold tracking-tight text-slate-100 hover:text-accent transition-colors"
         >
           <span className="text-accent">{'<'}</span>
           {profile.name.split(' ')[0]}
           <span className="text-accent">{' />'}</span>
-        </button>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <button
-                onClick={() => handleNav(link.href)}
-                className={`nav-link px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                  active === link.href
-                    ? 'nav-link-active text-accent'
-                    : 'text-muted hover:text-slate-100'
-                }`}
+              <NavLink
+                to={link.href}
+                className={({ isActive }) =>
+                  `nav-link px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    isActive
+                      ? 'nav-link-active text-accent'
+                      : 'text-muted hover:text-slate-100'
+                  }`
+                }
               >
                 {link.label}
-              </button>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -130,16 +110,19 @@ export default function Navbar() {
         <ul className="px-5 py-3 flex flex-col gap-1">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <button
-                onClick={() => handleNav(link.href)}
-                className={`w-full text-left px-3 py-2.5 text-sm font-medium rounded-md transition-colors ${
-                  active === link.href
-                    ? 'text-accent bg-accent-soft'
-                    : 'text-slate-300 hover:bg-white/5'
-                }`}
+              <NavLink
+                to={link.href}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `w-full block text-left px-3 py-2.5 text-sm font-medium rounded-md transition-colors ${
+                    isActive
+                      ? 'text-accent bg-accent-soft'
+                      : 'text-slate-300 hover:bg-white/5'
+                  }`
+                }
               >
                 {link.label}
-              </button>
+              </NavLink>
             </li>
           ))}
         </ul>
